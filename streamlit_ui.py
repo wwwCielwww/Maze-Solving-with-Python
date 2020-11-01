@@ -10,9 +10,10 @@ st.write('Alternatively, ')
 use_default = st.checkbox('Use default maze')
 
 img, marked = None, None
+
 if use_default:
     img = cv2.imread('sample.jpg')
-elif file != None:
+elif file is not None:
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
 
