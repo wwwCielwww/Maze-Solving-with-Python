@@ -1,4 +1,4 @@
 streamlit
 matplotlib
-opencv_python
+opencv-python-headless
 numpy
