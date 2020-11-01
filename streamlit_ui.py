@@ -34,4 +34,4 @@ if marked is not None:
         pathed = img.copy()
         thickness = (pathed.shape[0] + pathed.shape[0]) // 200
         drawPath(pathed, path, thickness)
-        st.image(pathed_image, channels="RGB", width=800)
+        st.image(pathed, channels="RGB", width=800)
