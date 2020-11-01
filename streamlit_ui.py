@@ -14,7 +14,7 @@ img, marked = None, None
 if use_default:
     img = cv2.imread('sample.jpg')
 elif file is not None:
-    file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
+    file_bytes = bytearray(file.read())
     img = cv2.imdecode(file_bytes, 1)
 
 if img is not None:
