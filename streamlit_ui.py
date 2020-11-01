@@ -9,6 +9,7 @@ file = st.file_uploader('Choose an image', ['jpg', 'jpeg', 'png'])
 st.write('Alternatively, ')
 use_default = st.checkbox('Use default maze')
 
+img = None
 if use_default:
     img = cv2.imread('sample.jpg')
 elif file != None:
