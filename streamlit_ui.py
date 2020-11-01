@@ -23,8 +23,8 @@ if img is not None:
     finish_y = st.sidebar.slider("Finish Y", value= 330 if use_default  else 100, min_value=0, max_value=img.shape[0], key='fy')
     marked = img.copy()
     thickness=(marked.shape[0] + marked.shape[0])//2//100
-    cv2.circle(marked, (start_x, start_y), circle_thickness, (0, 255, 0), -1)
-    cv2.circle(marked, (finish_x, finish_y), circle_thickness, (255, 0, 0), -1)
+    cv2.circle(marked, (start_x, start_y), thickness, (0, 255, 0), -1)
+    cv2.circle(marked, (finish_x, finish_y), thickness, (255, 0, 0), -1)
     st.image(marked, channels="RGB", width=800)
 
 if marked is not None:
@@ -33,5 +33,5 @@ if marked is not None:
             path = find_shortest_path(img, (start_x, start_y), (finish_x, finish_y))
         pathed = img.copy()
         thickness = (pathed.shape[0] + pathed.shape[0]) // 200
-        drawPath(pathed, path, path_thickness)
+        drawPath(pathed, path, thickness)
         st.image(pathed_image, channels="RGB", width=800)
