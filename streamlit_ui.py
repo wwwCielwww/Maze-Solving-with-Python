@@ -11,7 +11,7 @@ use_default = st.checkbox('Use default maze')
 
 if use_default:
     img = cv2.imread('sample.jpg')
-else:
+elif file != None:
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
 
